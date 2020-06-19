@@ -120,10 +120,10 @@ class SortingRobot:
                 self.set_light_off()
 
                 while self.can_move_left():
-                    if self.compare_item() == 1:
+                    if self.compare_item() >= 0:
                         self.swap_item()
                         self.move_left()
-                    elif self.compare_item() < 1:
+                    elif self.compare_item() < 0:
                         self.move_left()
                         self.set_light_on()
 
